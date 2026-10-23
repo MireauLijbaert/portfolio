@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mireau Lijbaert – Game Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--ink:#12213a;--mute:#54627d;--line:#d3dbe8;--acc:#6d3fd6;--accInk:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1729;--card:#16203a;--ink:#e8edf8;--mute:#9aa8c4;--line:#2a3757;--acc:#b79cff;--accInk:#0f1729}}
+:root[data-theme="dark"]{--bg:#0f1729;--card:#16203a;--ink:#e8edf8;--mute:#9aa8c4;--line:#2a3757;--acc:#b79cff;--accInk:#0f1729}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px}
+header b{font-size:18px}
+nav a{margin-left:20px;color:var(--ink);text-decoration:none;font-weight:700}
+nav a:hover{color:var(--acc)}
+.intro{padding:72px 0 48px}
+h1{font-size:clamp(38px,7vw,60px);line-height:1.05;margin:0 0 12px;font-weight:800;letter-spacing:-.03em}
+.role{font-size:22px;color:var(--acc);font-weight:700;margin:0 0 20px}
+.intro p{max-width:60ch;color:var(--mute);margin:0 0 24px}
+.btn{display:inline-block;background:var(--acc);color:var(--accInk);padding:10px 20px;border-radius:6px;font-weight:700;text-decoration:none;margin-right:10px}
+.btn.alt{background:none;color:var(--ink);border:1.5px solid var(--line)}
+h2{font-size:30px;margin:0 0 16px;letter-spacing:-.02em}
+.slider-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.slider-head h2{margin:0}
+.arrows button{font:inherit;font-size:20px;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;margin-left:8px}
+.arrows button:hover{border-color:var(--acc);color:var(--acc)}
+.slider{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;scrollbar-width:thin}
+.card{flex:0 0 min(320px,80%);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:var(--ink);padding:0;text-align:left;font:inherit;cursor:pointer;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-3px)}
+.card .img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--acc),var(--line));display:flex;align-items:center;justify-content:center;color:var(--accInk);font-weight:800;font-size:40px}
+.card .img img{width:100%;height:100%;object-fit:cover;display:block}
+.card h3{margin:0;padding:14px 16px 2px;font-size:19px}
+.card .sub{display:block;padding:0 16px 14px;font-size:14px;color:var(--mute)}
+dialog{width:min(680px,92vw);max-height:90vh;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(8,12,24,.6)}
+.d-in{padding:24px}
+.d-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+dialog h3{margin:0;font-size:26px;line-height:1.2}
+.d-meta{margin:4px 0 16px;color:var(--mute);font:400 14px "IBM Plex Mono",monospace}
+.x{font:inherit;font-size:22px;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:none;color:var(--ink);cursor:pointer;flex:none}
+.x:hover{border-color:var(--acc);color:var(--acc)}
+.media{margin-bottom:16px}
+.media iframe,.media video{width:100%;aspect-ratio:16/9;border:0;border-radius:8px;display:block;background:#000}
+.media figure{margin:0 0 14px}
+.media figcaption{font-size:14px;color:var(--mute);margin-top:6px}
+dialog p{margin:0 0 14px}
+.d-links a{margin-right:18px;font-weight:700}
+#contact{padding:56px 0 72px}
+.contact-list{list-style:none;padding:0;margin:0;font-size:19px}
+.contact-list li{margin-bottom:8px}
+.contact-list span{display:inline-block;width:90px;color:var(--mute)}
+footer{border-top:1px solid var(--line);padding:20px 0;color:var(--mute);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Mireau Lijbaert</b>
+<nav><a href="#projects">Projects</a><a href="#contact">Contact</a></nav></div></header>
+
+<main class="wrap">
+<section class="intro">
+  <h1>Mireau Lijbaert</h1>
+  <p class="role">Game developer</p>
+  <p>I'm a game development student who has worked on various programs, both solo and in a group. I mostly work on gameplay programming.</p>
+  <a class="btn" href="#projects">See my projects</a><a class="btn alt" href="#contact">Get in touch</a>
+</section>
+
+<section id="projects">
+  <div class="slider-head"><h2>Projects</h2>
+    <div class="arrows"><button id="prev" aria-label="Previous projects">&#8592;</button><button id="next" aria-label="Next projects">&#8594;</button></div></div>
+  <div class="slider" id="slider"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    <li><span>Email</span><a href="mailto:mireau3011@gmail.com">mireau3011@gmail.com</a></li>
+    <li><span>GitHub</span><a href="https://github.com/MireauLijbaert" target="_blank" rel="noopener">github.com/MireauLijbaert</a></li>
+    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/mireau-lijbaert-442161434/" target="_blank" rel="noopener">linkedin.com/in/mireau-lijbaert</a></li>
+  </ul>
+</section>
+</main>
+<footer><div class="wrap">© Mireau Lijbaert</div></footer>
+
+<dialog id="dlg" aria-labelledby="dt"><div class="d-in">
+  <div class="d-top"><h3 id="dt"></h3><button class="x" id="close" aria-label="Close">&times;</button></div>
+  <div class="d-meta" id="dm"></div>
+  <div class="media" id="media"></div>
+  <div id="dd"></div>
+  <div class="d-links" id="dl"></div>
+</div></dialog>
+
+<script>
+/* EDIT: one entry per project.
+   img: thumbnail for the card (path or null for a numbered placeholder).
+   media: list of {youtube:"id"} or {src:"videos/x.mp4", poster:"img/x.jpg", caption:"optional"}.
+   links: [["Label","https://..."], ...] shown as links under the description. */
+const P=[
+{title:"Cast No Shadow",meta:"Unreal Engine · C++ · Group project",
+ img:"https://img.youtube.com/vi/-4WqtwnDSRk/hqdefault.jpg",
+ media:[{youtube:"-4WqtwnDSRk"}],
+ desc:["In this project I mainly worked on the mechanic that lets two players carry an object together. The challenges were collision problems and the game feel of having to control something together.","I also helped with some of the smaller mechanics, like transforming into bats, sneaking while holding the coffin, and thresholds for the enemy AI's anger."],
+ links:[["Play on itch.io","https://warre-adriaensen.itch.io/cast-no-shadow"],["Watch on YouTube","https://www.youtube.com/watch?v=-4WqtwnDSRk"]]},
+{title:"Burger Time Remake",meta:"C++ · Custom engine",img:"img/burger-time.jpg",
+ media:[{src:"videos/burger-time.mp4",poster:"img/burger-time.jpg"}],
+ desc:["For this project I first had to build my own engine, learning a lot about how to build a game and the important game programming patterns that come with it.","After the engine was built I made a remake of Burger Time, an old arcade game, exploring the various mechanics packed into what seems like a simple game: enemy behavior, burger pieces that fall with a bunch of events caused by this, and especially game feel. The game is quite hard when you first try it, and I wanted my remake to have the same feeling: a challenge because of the game, not because of small bugs or movement not lining up properly."],
+ links:[]},
+{title:"Celeste Remake",meta:"C++ · Early solo project",img:"img/celeste.jpg",
+ media:[{src:"videos/celeste.mp4",poster:"img/celeste.jpg"}],
+ desc:["This was one of my first projects. My biggest struggle was working with collisions: as a starting programmer, making the collisions of the game myself proved challenging and filled with bugs.","Another part of the challenge was something I hadn't thought about before: using a spritesheet to make animations, making sure they all line up and look good. This didn't really seem like something to do as a programmer to me."],
+ links:[]},
+{title:"Zombie Game",meta:"C++ · AI · GOAP · A* · Steering",img:"img/zombie-loot.jpg",
+ media:[{src:"videos/zombie-loot.mp4",poster:"img/zombie-loot.jpg",caption:"Looting houses"},
+        {src:"videos/zombie-running.mp4",poster:"img/zombie-running.jpg",caption:"Running from zombies"},
+        {src:"videos/zombie-shooting.mp4",poster:"img/zombie-shooting.jpg",caption:"Shooting zombies"}],
+ desc:["A broader project on an AI agent that needed to survive in a top-down zombie game. Zombies spawn around the map, and the player has access to houses with guns, food and healing items. The aim was to make an AI player that can survive as long as possible by itself.","Using the knowledge I gained working on the GOAP project, I used GOAP for the decision making here too. I also learned about pathfinding algorithms like A* to make my agent pathfind to items, and steering behaviours to search around the map for houses and items."],
+ links:[]},
+{title:"Weaponroll",meta:"Unity · C# · Solo project",img:"img/weaponroll.jpg",
+ media:[{src:"videos/weaponroll.mp4",poster:"img/weaponroll.jpg"}],
+ desc:["My first real experience with Unity and partly with using C# for making a game. I learned about some of the differences between C# and C++ for games and the strengths and weaknesses each gives. I also learned about the various systems of Unity, and why it's a good tool to make games with and when I would choose it for a project.","This project also helped with game design and thinking about systems, as it was a game idea I formed myself around 2 words we were given."],
+ links:[]},
+{title:"GOAP",meta:"C++ · AI",img:"img/goap.jpg",
+ media:[{src:"videos/goap.mp4",poster:"img/goap.jpg"}],
+ desc:["A small project learning about Goal Oriented Action Planning. It was mostly about how to set it up, make an AI agent that uses GOAP to make multiple decisions, and learn how to distribute weights."],
+ links:[]},
+{title:"Unreal Tower Defense",meta:"C++ · Unreal Engine · Blueprints",img:"img/unreal-td.jpg",
+ media:[{src:"videos/unreal-td.mp4",poster:"img/unreal-td.jpg"}],
+ desc:["This project was about learning how to work with Unreal. I learned how to use Blueprints, but because of problems with Visual Studio I couldn't really do the coding part well: the project would repeatedly break, IntelliSense stopped working and it was a bit of a mess to work with."],
+ links:[]},
+{title:"PGA Game",meta:"C++ · FlyTracer · PGA",img:null,media:[],
+ desc:["In this project the goal was more focused on the math than on the game itself, but it taught me how to use math to calculate things for games more easily."],
+ links:[]}
+];
+
+const sl=document.getElementById('slider'),dlg=document.getElementById('dlg'),media=document.getElementById('media');
+P.forEach((p,i)=>{
+  const b=document.createElement('button');b.type='button';b.className='card';
+  b.setAttribute('aria-label','Open '+p.title);
+  b.innerHTML='<div class="img">'+(p.img?'<img src="'+p.img+'" alt="" loading="lazy" onerror="this.remove()">':'<span>'+(i+1)+'</span>')+'</div><h3>'+p.title+'</h3><span class="sub">'+p.meta+'</span>';
+  b.onclick=()=>show(p);sl.appendChild(b);
+});
+function show(p){
+  document.getElementById('dt').textContent=p.title;
+  document.getElementById('dm').textContent=p.meta;
+  media.innerHTML='';
+  p.media.forEach(m=>{
+    if(m.youtube){const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+m.youtube;f.title=p.title+' video';f.allow='accelerometer; encrypted-media; picture-in-picture';f.allowFullscreen=true;media.appendChild(f);return}
+    const fig=document.createElement('figure'),v=document.createElement('video');
+    v.src=m.src;v.poster=m.poster||'';v.controls=true;v.playsInline=true;v.preload='none';v.setAttribute('aria-label',m.caption||p.title+' gameplay');
+    fig.appendChild(v);
+    if(m.caption){const c=document.createElement('figcaption');c.textContent=m.caption;fig.appendChild(c)}
+    media.appendChild(fig);
+  });
+  document.getElementById('dd').innerHTML=p.desc.map(t=>'<p>'+t+'</p>').join('');
+  document.getElementById('dl').innerHTML=p.links.map(l=>'<a href="'+l[1]+'" target="_blank" rel="noopener">'+l[0]+'</a>').join('');
+  dlg.showModal();
+}
+document.getElementById('close').onclick=()=>dlg.close();
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('close',()=>{media.innerHTML=''});
+const go=d=>sl.scrollBy({left:d*(sl.clientWidth*.8),behavior:'smooth'});
+document.getElementById('prev').onclick=()=>go(-1);
+document.getElementById('next').onclick=()=>go(1);
+</script>
+</body>
+</html>
